@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Портал мага</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: "Segoe UI", sans-serif;
+      padding: 20px;
+    }
+    h1 { color: #ffcc00; }
+  </style>
+</head>
+<body>
+  <h1>🏰 Портал мага</h1>
+  <p>⚔️ Уровень: <b id="level">загрузка...</b></p>
+  <p>🎁 Бонус: <b id="bonus">загрузка...</b></p>
+
+  <script>
+    const tg = window.Telegram.WebApp;
+    tg.expand();
+
+    // Пока что просто текст
+    document.getElementById("level").innerText = "5";
+    document.getElementById("bonus").innerText = "+3 дня VPN";
+  </script>
+</body>
+</html>
