@@ -9,7 +9,11 @@
 
     body {
       margin: 0;
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+      /* Вместо градиента вставляем фон с картинкой */
+      background-image: url('https://avatars.mds.yandex.net/get-shedevrum/16449972/img_7154de9d506c11f08e6fba22276cb0e7/orig');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       color: #c9b37e;
       font-family: 'MedievalSharp', cursive, serif;
       user-select: none;
@@ -65,7 +69,7 @@
     }
 
     .ach {
-      background: #2b2305;
+      background: #2b2305cc; /* Немного прозрачный для читаемости на фоне */
       border: 2px solid #7e6b3a;
       border-radius: 15px;
       width: 160px;
