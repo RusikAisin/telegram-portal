@@ -1,31 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Портал мага</title>
+  <meta charset="UTF-8" />
+  <title>Мои достижения</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <style>
-    body {
-      background-color: #121212;
-      color: white;
-      font-family: "Segoe UI", sans-serif;
-      padding: 20px;
-    }
-    h1 { color: #ffcc00; }
+    body { font-family: sans-serif; padding: 20px; background: #111; color: #fff; }
+    h1 { text-align: center; }
+    .buttons { display: flex; justify-content: center; gap: 10px; margin: 20px 0; }
+    .buttons button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    #achievements { display: flex; justify-content: center; align-items: center; height: 100px; font-size: 18px; }
   </style>
 </head>
 <body>
-  <h1>🏰 Портал мага</h1>
-  <p>⚔️ Уровень: <b id="level">загрузка...</b></p>
-  <p>🎁 Бонус: <b id="bonus">загрузка...</b></p>
+  <h1>🏆 Мои достижения</h1>
+  <div class="buttons">
+    <button onclick="showMine()">Полученные</button>
+    <button onclick="showAll()">Все</button>
+  </div>
+  <div id="achievements">В разработке...</div>
 
   <script>
     const tg = window.Telegram.WebApp;
-    tg.expand();
+    tg.ready();
 
-    // Пока что просто текст
-    document.getElementById("level").innerText = "5";
-    document.getElementById("bonus").innerText = "+3 дня VPN";
+    function showMine() {
+      const container = document.getElementById("achievements");
+      container.textContent = "В разработке...";
+    }
+
+    function showAll() {
+      const container = document.getElementById("achievements");
+      container.textContent = "В разработке...";
+    }
   </script>
 </body>
 </html>
